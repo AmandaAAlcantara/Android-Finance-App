@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_utilities"
+            android:icon="@drawable/baseline_electric_bolt_24"
+            android:title="Utilities"/>
+
+        <item
+            android:id="@+id/nav_shopping"
+            android:icon="@drawable/baseline_shopping_bag_24"
+            android:title="Shopping"/>
+
+        <item
+            android:id="@+id/nav_subscriptions"
+            android:icon="@drawable/baseline_devices_24"
+            android:title="Subscriptions"/>
+
+        <item
+            android:id="@+id/nav_food"
+            android:icon="@drawable/baseline_fastfood_24"
+            android:title="Food"/>
+
+        <item
+            android:id="@+id/nav_transportation"
+            android:icon="@drawable/baseline_commute_24"
+            android:title="Transportation"/>
+
+        <item
+            android:id="@+id/nav_savings"
+            android:icon="@drawable/baseline_auto_fix_high_24"
+            android:title="Savings"/>
+
+
+
+    </group>
+
+</menu>

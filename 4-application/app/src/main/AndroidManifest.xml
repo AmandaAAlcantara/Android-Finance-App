@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Mobdevportfolio" >
 
         <activity
-            android:name=".view.RegisterActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
