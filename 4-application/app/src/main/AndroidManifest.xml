@@ -12,12 +12,19 @@
         android:theme="@style/Theme.Mobdevportfolio"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".UserLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false" />
+        <activity
             android:name=".DetailedActivity"
             android:exported="false" />
         <activity android:name=".AddTransactionActivity" />
 
+
         <activity
-            android:name=".MainActivity2"
+            android:name="."
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,6 +32,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
     </application>
 
 </manifest>
