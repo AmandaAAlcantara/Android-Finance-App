@@ -11,7 +11,6 @@
         style="@style/TextAppearance.MaterialComponents.Headline4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,7 +21,6 @@
         style="@style/TextAppearance.MaterialComponents.Caption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login to your account"
         app:layout_constraintTop_toBottomOf="@id/titleLabelTv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,39 +69,36 @@
 
     <Button
         android:id="@+id/loginBtn"
-        android:layout_width="138dp"
-        android:layout_height="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/passwordTil"
-        android:text="Login"
-
-
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="301dp" />
+        android:text="Login"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="15dp"
+        android:padding="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordTil"
+        android:layout_marginTop="16dp"/>
 
     <TextView
         android:id="@+id/noAccountTv"
         style="@style/TextAppearance.MaterialComponents.Caption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="116dp"
-
-
+        android:layout_below="@id/passwordTil"
+        android:layout_alignStart="@id/loginBtn"
+        android:layout_alignEnd="@id/loginBtn"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
         android:text="@string/no_account"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="699dp" />
-    <Button
-        android:id="@+id/backButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginBtn"
         android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp" />
+        tools:ignore="MissingConstraints"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

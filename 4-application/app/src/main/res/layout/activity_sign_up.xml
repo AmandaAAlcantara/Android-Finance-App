@@ -22,7 +22,6 @@
         style="@style/TextAppearance.MaterialComponents.Caption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create a new account"
         app:layout_constraintTop_toBottomOf="@id/titleLabelTv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,21 +67,16 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+        tools:ignore="MissingConstraints,UnknownId"
         android:id="@+id/SignUpBtn"
-        android:layout_width="344dp"
-        android:layout_height="38dp"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="301dp"
-        android:text="SignUp"
-        tools:ignore="MissingConstraints,UnknownId" />
-    <Button
-        android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back"
-        app:layout_constraintTop_toTopOf="parent"
+        android:text="SignUp"
+        app:layout_constraintTop_toBottomOf="@id/passwordTil"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
