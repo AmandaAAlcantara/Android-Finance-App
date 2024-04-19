@@ -15,12 +15,14 @@
             android:layout_height="180dp"
             android:background="@color/backround"
             android:padding="20dp">
+
             <ImageView
                 android:id="@+id/image_profile"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerVertical="true"
-                android:src="@drawable/baseline_person_24"/>
+                android:src="@drawable/baseline_person_24"
+                android:tint="@color/white"/>
 
 
             <TextView

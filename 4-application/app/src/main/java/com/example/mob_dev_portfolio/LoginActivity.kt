@@ -58,7 +58,7 @@ class LoginActivity : AppCompatActivity() {
             startActivity(Intent(this,SignUpActivity::class.java))
         }
         //handle click, begin login
-        binding.loginBtn.setOnClickListener{ //before logging in valiate the data
+        binding.loginBtn.setOnClickListener{ //before logging in validate the data
             validateData()
         }
 
@@ -84,7 +84,7 @@ class LoginActivity : AppCompatActivity() {
         firebaseAuth.signInWithEmailAndPassword(email, password)
             .addOnSuccessListener {
                 progressDialog.dismiss()
-                startActivity(Intent(this, UserLoginActivity::class.java))
+                startActivity(Intent(this, MainActivity::class.java))
                 finish()
             }
             .addOnFailureListener { e ->
@@ -108,9 +108,6 @@ class LoginActivity : AppCompatActivity() {
             //user is already logged in
             startActivity(Intent(this, UserLoginActivity::class.java))
             finish()
-
-
-
         }
     }
 }

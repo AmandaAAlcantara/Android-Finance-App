@@ -5,6 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/signup"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp" />
 
     <TextView
         android:id="@+id/titleLabelTv"
@@ -35,12 +44,13 @@
         app:layout_constraintTop_toBottomOf="@id/subTitleLabelTv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="170dp">
 
         <EditText
             android:id="@+id/emailEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/logoImageView"
             android:inputType="textEmailAddress"
             android:hint="Email" />
 
@@ -99,6 +109,4 @@
         app:layout_constraintTop_toBottomOf="@id/loginBtn"
         android:layout_marginTop="16dp"
         tools:ignore="MissingConstraints"/>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

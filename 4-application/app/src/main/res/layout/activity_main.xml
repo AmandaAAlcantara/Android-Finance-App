@@ -45,8 +45,8 @@
                     android:id="@+id/bottom_navigation"
                     app:labelVisibilityMode="labeled"
                     app:menu="@menu/bottom_menu"
-                    app:itemIconTint="@color/black"
-                    app:itemTextColor="@color/black"
+                    app:itemIconTint="@color/dark_grey"
+                    app:itemTextColor="@color/dark_grey"
                     android:background="@android:color/transparent"/>
 
             </com.google.android.material.bottomappbar.BottomAppBar>
@@ -64,7 +64,6 @@
         app:itemTextColor="@color/navy"
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/nav_menu"/>
-
 </androidx.drawerlayout.widget.DrawerLayout>
 
 
