@@ -11,24 +11,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mobdevportfolio"
         android:usesCleartextTraffic="true">
-        <activity
-            android:name=".UserLoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SignUpActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
+
+
         <activity
             android:name=".DetailedActivity"
             android:exported="false" />
         <activity android:name=".AddTransactionActivity" />
 
-
-
+        <!--   Login     -->
         <activity
-            android:name=".MainActivity2"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,6 +29,25 @@
             </intent-filter>
         </activity>
 
+        <!--   SignUp    -->
+        <activity
+        android:name=".SignUpActivity"
+        android:exported="false" />
+
+        <!--   Home Page    -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <!--   UserProfile    -->
+        <activity
+            android:name=".UserLoginActivity"
+            android:exported="false" />
+
+        <!--   UserBudget    -->
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
 
     </application>
 

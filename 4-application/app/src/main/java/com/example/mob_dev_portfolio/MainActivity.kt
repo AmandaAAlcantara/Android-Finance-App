@@ -1,5 +1,6 @@
 package com.example.mob_dev_portfolio
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -30,12 +31,22 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding.navigationDrawer.setNavigationItemSelectedListener(this)
 
         binding.bottomNavigation.background = null
+
         binding.bottomNavigation.setOnItemSelectedListener { item ->
             when(item.itemId){
                 R.id.bottom_home -> openFragment(HomeFragment())
-                R.id.bottom_profile -> openFragment(ProfileFragment())
                 R.id.bottom_overview -> openFragment(OverviewFragment())
-                R.id.bottom_budget -> openFragment(BudgetFragment())
+                R.id.bottom_budget -> {
+                    // Redirect to BudgetActivity
+                    val intent = Intent(this@MainActivity, MainActivity2::class.java)
+                    startActivity(intent)
+                }
+
+                R.id.bottom_profile -> {
+                    // Redirect to UserLoginActivity
+                    val intent = Intent(this@MainActivity, UserLoginActivity::class.java)
+                    startActivity(intent)
+                }
 
             }
             true
@@ -43,6 +54,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         fragmentManager = supportFragmentManager
         openFragment(HomeFragment())
     }
+
+
+
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId){

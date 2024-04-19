@@ -73,6 +73,4 @@ class AddTransactionActivity: AppCompatActivity() {
             finish()
         }
     }
-
-
 }
