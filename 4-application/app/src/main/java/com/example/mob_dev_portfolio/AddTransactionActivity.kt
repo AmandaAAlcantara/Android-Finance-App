@@ -37,8 +37,6 @@ class AddTransactionActivity: AppCompatActivity() {
             override fun afterTextChanged(s: Editable?) {}
         })
 
-
-
         binding.addTransactionBtn.setOnClickListener {
             val label = binding.labelInput.text.toString()
             val description = binding.descriptionInput.text.toString()

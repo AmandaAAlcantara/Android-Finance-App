@@ -12,3 +12,4 @@ data class Transaction(
     val description: String): Serializable{
 
 }
+

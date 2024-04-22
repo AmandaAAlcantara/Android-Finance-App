@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -10,18 +10,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Mobdevportfolio"
-        android:usesCleartextTraffic="true">
-
-
+        android:usesCleartextTraffic="true" >
         <activity
             android:name=".DetailedActivity"
             android:exported="false" />
         <activity android:name=".AddTransactionActivity" />
 
-        <!--   Login     -->
+
         <activity
-            android:name=".LoginActivity"
-            android:exported="true">
+            android:name=".ui.NewsActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,26 +27,19 @@
             </intent-filter>
         </activity>
 
-        <!--   SignUp    -->
-        <activity
-        android:name=".SignUpActivity"
-        android:exported="false" />
 
-        <!--   Home Page    -->
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false" /> <!-- Home Page -->
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
-
-        <!--   UserProfile    -->
+            android:exported="false" /> <!-- UserProfile -->
         <activity
             android:name=".UserLoginActivity"
-            android:exported="false" />
-
-        <!--   UserBudget    -->
+            android:exported="false" /> <!-- UserBudget -->
         <activity
             android:name=".MainActivity2"
             android:exported="false" />
-
     </application>
 
 </manifest>

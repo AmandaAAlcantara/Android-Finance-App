@@ -64,7 +64,6 @@ class MainActivity2 : AppCompatActivity() {
             val intent = Intent(this, AddTransactionActivity::class.java)
             startActivity(intent)
         }
-
     }
 
     private fun fetchAll(){
@@ -76,7 +75,6 @@ class MainActivity2 : AppCompatActivity() {
                 transactionAdapter.setData(transactions)
             }
         }
-
     }
     private fun updateDashboard(){
         val totalAmount = transactions.map { it.amount }.sum()
