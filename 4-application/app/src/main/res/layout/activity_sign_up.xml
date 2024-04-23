@@ -80,12 +80,4 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"/>
 
-    <ImageView
-        android:id="@+id/bottomRightImageView"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:src="@drawable/login_image"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,5 @@
 package com.example.mob_dev_portfolio
 
-import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
@@ -33,6 +32,9 @@ class TransactionAdapter(private var transactions: List<Transaction>) :
             holder.amount.text = "- $%.2f".format(Math.abs(transaction.amount))
             holder.amount.setTextColor(ContextCompat.getColor(context, R.color.red))
         }
+
+        holder.label.text = transaction.label
+
 
         holder.itemView.setOnClickListener {
             val intent = Intent(context, DetailedActivity::class.java)

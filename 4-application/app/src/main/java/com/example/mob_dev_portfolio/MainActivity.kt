@@ -35,7 +35,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding.bottomNavigation.setOnItemSelectedListener { item ->
             when(item.itemId){
                 R.id.bottom_home -> openFragment(HomeFragment())
-                R.id.bottom_overview -> openFragment(OverviewFragment())
+                R.id.bottom_overview -> {
+                    // Redirect to Overview
+                    val intent = Intent(this@MainActivity, com.example.mob_dev_portfolio.graph.GraphView::class.java)
+                    startActivity(intent)
+                }
                 R.id.bottom_budget -> {
                     // Redirect to BudgetActivity
                     val intent = Intent(this@MainActivity, MainActivity2::class.java)

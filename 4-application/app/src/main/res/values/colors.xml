@@ -11,9 +11,9 @@
     <color name="dark_grey">#3A3A3A</color>
     <color name="grey">#9C9C9C</color>
     <color name="navy">#0cb5ca</color>
-    <color name="green">#357C38</color>
-    <color name="red">#9E2C24</color>
-    <color name="backround">#8CE3ED</color>
+    <color name="green">#0cb5ca</color>
+    <color name="red">#E4645B</color>
+    <color name="backround">#01012c</color>
     <color name="dark_blue">#01012c</color>
 
 

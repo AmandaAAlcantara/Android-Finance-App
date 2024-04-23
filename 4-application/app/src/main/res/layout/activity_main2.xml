@@ -7,115 +7,162 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
 
+    <View
+        android:id="@+id/View"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/backround"/>
+
     <LinearLayout
         android:id="@+id/balance_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="18dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Total Balance"
-            android:textAllCaps="true"
-            android:textStyle="bold"
-            android:textSize="20sp"/>
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp">
 
         <TextView
             android:id="@+id/balance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="$300"
+            android:text="£300"
             android:textSize="32sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/image_budgeting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="10dp"
+        android:layout_below="@id/balance_layout">
 
     </LinearLayout>
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/dashboard"
+        android:id="@+id/dashboard_budget"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/balance_layout"
-        android:layout_marginTop="12dp"
+        android:layout_below="@id/View"
+        android:layout_marginTop="20dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        app:cardCornerRadius="12dp">
+        app:cardCornerRadius="20dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp">
-            <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="0.5"
-                android:gravity="center">
-                <TextView
-                    android:id="@+id/budget"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="$400"
-                    android:textSize="26sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/green">
-                </TextView>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Budget"
-                    android:textSize="14sp"
-                    android:textAllCaps="true"/>
-            </LinearLayout>
-            <LinearLayout
+                android:text="Budget"
+                android:textSize="14sp"
+                android:textAllCaps="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/budget"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="0.5"
-                android:gravity="center">
-                <TextView
-                    android:id="@+id/expense"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="$400"
-                    android:textSize="26sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/red">
-                </TextView>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Expense"
-                    android:textSize="14sp"
-                    android:textAllCaps="true"/>
-            </LinearLayout>
+                android:text="£400"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="@color/navy"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="20dp"/>
+
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/dashboard_expense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dashboard_budget"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Expense"
+                android:textSize="14sp"
+                android:textAllCaps="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/expense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="£400"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="@color/red"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="20dp"/>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
 
     <TextView
         android:id="@+id/recyclerview_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Transactions"
         android:textStyle="bold"
         android:textSize="14sp"
         android:textAllCaps="true"
-        android:layout_below="@id/dashboard"
+        android:layout_below="@id/dashboard_expense"
         android:layout_marginTop="12dp"
         android:layout_marginStart="10dp"></TextView>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recyclerview_title">
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/recyclerview_title"
-        android:layout_margin="10dp"
 
-        android:layout_marginTop="10dp">
+        android:layout_marginStart="10dp"
+
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp">
 
     </androidx.recyclerview.widget.RecyclerView>
+    </ScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addBtn"
@@ -127,12 +174,6 @@
         android:src="@drawable/add"
         android:backgroundTint="@color/navy"
         app:borderWidth="0dp"/>
-
-
-
-
-
-
 </RelativeLayout>
 
 

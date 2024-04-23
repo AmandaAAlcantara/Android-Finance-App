@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mobdevportfolio"
         android:usesCleartextTraffic="true" >
+
         <activity
             android:name=".DetailedActivity"
             android:exported="false" />
@@ -18,7 +19,7 @@
 
 
         <activity
-            android:name=".ui.NewsActivity"
+            android:name=".LoginActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,10 +37,13 @@
             android:exported="false" /> <!-- UserProfile -->
         <activity
             android:name=".UserLoginActivity"
-            android:exported="false" /> <!-- UserBudget -->
+            android:exported="false" /> <!-- Profile -->
         <activity
             android:name=".MainActivity2"
-            android:exported="false" />
+            android:exported="false" />  <!-- Budget -->
+        <activity
+            android:name=".graph.GraphView"
+            android:exported="false" />  <!-- Graph  -->
     </application>
 
 </manifest>
