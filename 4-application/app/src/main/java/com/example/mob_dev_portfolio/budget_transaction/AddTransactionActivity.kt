@@ -22,6 +22,10 @@ class AddTransactionActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
+        super.onCreate(savedInstanceState)
+        binding = ActivityAddTransactionBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
         val type = listOf("Food", "Savings", "Shopping", "Subscriptions", "Transportation", "Utilities")
         val autoComplete: AutoCompleteTextView = findViewById(R.id.auto_complete_txt)
         val adapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, type)
@@ -29,11 +33,6 @@ class AddTransactionActivity: AppCompatActivity() {
         autoComplete.onItemClickListener = AdapterView.OnItemClickListener { adapterView, view, i, l ->
             val typeSelected = adapterView.getItemAtPosition(i)
         }
-
-
-        super.onCreate(savedInstanceState)
-        binding = ActivityAddTransactionBinding.inflate(layoutInflater)
-        setContentView(binding.root)
 
         binding.labelInput.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
