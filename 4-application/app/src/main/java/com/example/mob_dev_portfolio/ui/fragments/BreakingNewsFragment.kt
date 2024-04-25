@@ -1,4 +1,4 @@
-package com.example.mob_dev_portfolio.ui.Fragments
+package com.example.mob_dev_portfolio.ui.fragments
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -8,27 +8,20 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.mob_dev_portfolio.R
 import com.example.mob_dev_portfolio.adapters.NewsAdapter
 import com.example.mob_dev_portfolio.databinding.FragmentBreakingNewsBinding
 import com.example.mob_dev_portfolio.ui.NewsViewModel
 import com.example.mob_dev_portfolio.util.Resource
 
 
-class BreakingNewsFragment : Fragment() {
+class BreakingNewsFragment : Fragment(R.layout.fragment_breaking_news) {
 
-    private lateinit var viewModel: NewsViewModel
-    private lateinit var binding: FragmentBreakingNewsBinding
-    private lateinit var newsAdapter: NewsAdapter
+    lateinit var viewModel: NewsViewModel
+    lateinit var newsAdapter: NewsAdapter
+    lateinit var binding: FragmentBreakingNewsBinding
 
-    private val TAG = "BreakingNewsFragment"
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentBreakingNewsBinding.inflate(inflater, container, false)
-        return binding.root
-    }
+    val TAG = "BreakingNewsFragment"
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -46,7 +39,7 @@ class BreakingNewsFragment : Fragment() {
                 is Resource.Error -> {
                     hideProgressBar()
                     response.message?.let { message ->
-                        Log.e(TAG, "An error occurred: $message")
+                        Log.e(TAG, "An error occured: $message")
                     }
                 }
                 is Resource.Loading -> {
@@ -71,4 +64,8 @@ class BreakingNewsFragment : Fragment() {
             layoutManager = LinearLayoutManager(activity)
         }
     }
+
 }
+
+
+

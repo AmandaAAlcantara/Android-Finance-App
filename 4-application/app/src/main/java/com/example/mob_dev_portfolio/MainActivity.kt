@@ -9,7 +9,15 @@ import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
+import com.example.mob_dev_portfolio.budget_transaction.TransactionActivity
 import com.example.mob_dev_portfolio.databinding.ActivityMainBinding
+import com.example.mob_dev_portfolio.login.UserLoginActivity
+import com.example.mob_dev_portfolio.nav_menu.FoodFragment
+import com.example.mob_dev_portfolio.nav_menu.SavingsFragment
+import com.example.mob_dev_portfolio.nav_menu.ShoppingFragment
+import com.example.mob_dev_portfolio.nav_menu.SubscriptionFragment
+import com.example.mob_dev_portfolio.nav_menu.TransportFragment
+import com.example.mob_dev_portfolio.nav_menu.UtilitiesFragment
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -42,7 +50,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 }
                 R.id.bottom_budget -> {
                     // Redirect to BudgetActivity
-                    val intent = Intent(this@MainActivity, MainActivity2::class.java)
+                    val intent = Intent(this@MainActivity, TransactionActivity::class.java)
                     startActivity(intent)
                 }
 

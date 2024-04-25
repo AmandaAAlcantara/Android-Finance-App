@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".SetGoal">
+
+    <View
+        android:id="@+id/View"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:background="@color/backround"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15dp">
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="130dp"
+        android:src="@drawable/goal2"
+       ></ImageView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutGoal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/View">
+
+        <TextView
+            android:id="@+id/text_set_goal"
+            android:layout_below="@+id/View"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Get Started!"
+            android:textSize="16sp"
+            android:gravity="center">
+        </TextView>
+
+        <RelativeLayout
+            android:layout_below="@+id/text_set_goal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/goalLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:hint="Set saving goal"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/setGoalInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_below="@+id/goalLayout"
+                android:id="@+id/addGoalBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Confirm"
+                android:padding="12dp"
+                android:shadowColor="@color/backround"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

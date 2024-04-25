@@ -1,10 +1,10 @@
-package com.example.mob_dev_portfolio.ui.Fragments
+package com.example.mob_dev_portfolio.ui.fragments
 
+import com.example.mob_dev_portfolio.ui.NewsActivity
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.example.mob_dev_portfolio.R
-import com.example.mob_dev_portfolio.ui.NewsActivity
 import com.example.mob_dev_portfolio.ui.NewsViewModel
 
 class ArticleFragment : Fragment(R.layout.fragment_article) {
@@ -16,3 +16,4 @@ class ArticleFragment : Fragment(R.layout.fragment_article) {
         viewModel = (activity as NewsActivity).viewModel
     }
 }
+

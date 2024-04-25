@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity2">
+    tools:context=".budget_transaction.TransactionActivity">
 
     <View
         android:id="@+id/View"
@@ -130,6 +130,31 @@
 
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
+    <LinearLayout
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dashboard_expense"
+        android:orientation="vertical"
+        android:layout_marginStart="25px"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="  Swipe right "
+            android:drawableLeft="@drawable/delete"
+            android:drawableTint="@color/backround">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="  Click on transaction"
+            android:drawableLeft="@drawable/edit"
+            android:drawableTint="@color/backround">
+        </TextView>
+    </LinearLayout>
 
 
 
@@ -142,7 +167,7 @@
         android:textStyle="bold"
         android:textSize="14sp"
         android:textAllCaps="true"
-        android:layout_below="@id/dashboard_expense"
+        android:layout_below="@id/info"
         android:layout_marginTop="12dp"
         android:layout_marginStart="10dp"></TextView>
 
@@ -155,9 +180,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/recyclerview_title"
-
         android:layout_marginStart="10dp"
-
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp">
 

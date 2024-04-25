@@ -1,4 +1,4 @@
-package com.example.mob_dev_portfolio
+package com.example.mob_dev_portfolio.login
 
 import android.app.ProgressDialog
 import android.content.Intent
@@ -9,6 +9,7 @@ import android.util.Log
 import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.ActionBar
+import com.example.mob_dev_portfolio.MainActivity
 import com.example.mob_dev_portfolio.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -55,7 +56,7 @@ class LoginActivity : AppCompatActivity() {
 
         //handle click, begin SignUpActivity
         binding.noAccountTv.setOnClickListener{
-            startActivity(Intent(this,SignUpActivity::class.java))
+            startActivity(Intent(this, SignUpActivity::class.java))
         }
         //handle click, begin login
         binding.loginBtn.setOnClickListener{ //before logging in validate the data

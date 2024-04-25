@@ -1,18 +1,36 @@
-package com.example.mob_dev_portfolio
+package com.example.mob_dev_portfolio.budget_transaction
 
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.room.Room
+import com.example.mob_dev_portfolio.R
 import com.example.mob_dev_portfolio.databinding.ActivityAddTransactionBinding
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
+
 class AddTransactionActivity: AppCompatActivity() {
+
+
+
     private lateinit var binding: ActivityAddTransactionBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        val type = listOf("Food", "Savings", "Shopping", "Subscriptions", "Transportation", "Utilities")
+        val autoComplete: AutoCompleteTextView = findViewById(R.id.auto_complete_txt)
+        val adapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, type)
+        autoComplete.setAdapter(adapter)
+        autoComplete.onItemClickListener = AdapterView.OnItemClickListener { adapterView, view, i, l ->
+            val typeSelected = adapterView.getItemAtPosition(i)
+        }
+
+
         super.onCreate(savedInstanceState)
         binding = ActivityAddTransactionBinding.inflate(layoutInflater)
         setContentView(binding.root)

@@ -16,16 +16,18 @@ class NewsViewModel(
     var breakingNewsPage = 1
 
     init {
-        getBreakingNews("us")
+        getBreakingNews("gb", "business")
     }
 
-    fun getBreakingNews(countryCode: String) = viewModelScope.launch {
+    //only alive if the view is alive
+    fun getBreakingNews(countryCode: String, category: String) = viewModelScope.launch {
         breakingNews.postValue(Resource.Loading())
-        val response = newsRepository.getBreakingNews(countryCode, breakingNewsPage)
+        //suspend function
+        val response = newsRepository.getBreakingNews(countryCode, category,  breakingNewsPage)
         breakingNews.postValue(handleBreakingNewsResponse(response))
     }
 
-    private fun handleBreakingNewsResponse(response: Response<NewsResponse>) : Resource<NewsResponse> {
+     fun handleBreakingNewsResponse(response: Response<NewsResponse>) : Resource<NewsResponse> {
         if(response.isSuccessful) {
             response.body()?.let { resultResponse ->
                 return Resource.Success(resultResponse)
@@ -34,4 +36,7 @@ class NewsViewModel(
         return Resource.Error(response.message())
     }
 }
+
+
+
 

@@ -1,4 +1,4 @@
-package com.example.mob_dev_portfolio
+package com.example.mob_dev_portfolio.budget_transaction
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mob_dev_portfolio.R
 
 class TransactionAdapter(private var transactions: List<Transaction>) :
     RecyclerView.Adapter<TransactionAdapter.TransactionHolder>() {

@@ -1,4 +1,4 @@
-package com.example.mob_dev_portfolio
+package com.example.mob_dev_portfolio.budget_transaction
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,7 +11,7 @@ import com.example.mob_dev_portfolio.databinding.ActivityMain2Binding
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
-class MainActivity2 : AppCompatActivity() {
+class TransactionActivity : AppCompatActivity() {
 
     private lateinit var deletedTransaction: Transaction
     private lateinit var transactions: List<Transaction>
