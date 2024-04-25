@@ -8,15 +8,48 @@ import androidx.room.Update
 
 @Dao
 interface TransactionDao {
+
+    //get all values from the room database
     @Query("SELECT * from transactions")
     fun getAll(): List<Transaction>
 
+
+    //get all Food values from room database
+    @Query("SELECT * FROM transactions WHERE type = 'Food'")
+    fun getAllTypeFood(): List<Transaction>
+
+
+    //get all Savings values from room database
+    @Query("SELECT * FROM transactions WHERE type = 'Savings'")
+    fun getAllTypeSavings(): List<Transaction>
+
+    //get all Shopping values from room database
+    @Query("SELECT * FROM transactions WHERE type = 'Shopping'")
+    fun getAllTypeShopping(): List<Transaction>
+
+    //get all Subscriptions values from room database
+    @Query("SELECT * FROM transactions WHERE type = 'Subscriptions'")
+    fun getAllTypeSubscriptions(): List<Transaction>
+
+    //get all Transportation values from room database
+    @Query("SELECT * FROM transactions WHERE type = 'Transportation'")
+    fun getAllTypeTransportation(): List<Transaction>
+
+    //get all Utilities values from room database
+    @Query("SELECT * FROM transactions WHERE type = 'Utilities'")
+    fun getAllTypeUtilities(): List<Transaction>
+
+    //insert transaction
     @Insert
     fun insertAll(vararg transaction: Transaction)
 
+
+    //delete transaction
     @Delete
     fun delete(transaction: Transaction)
 
+
+    //update a transaction
     @Update
     fun update(vararg  transaction: Transaction)
 }

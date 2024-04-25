@@ -15,9 +15,6 @@ import kotlinx.coroutines.launch
 
 
 class AddTransactionActivity: AppCompatActivity() {
-
-
-
     private lateinit var binding: ActivityAddTransactionBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -55,9 +52,11 @@ class AddTransactionActivity: AppCompatActivity() {
         })
 
         binding.addTransactionBtn.setOnClickListener {
+            val type = binding.autoCompleteTxt.text.toString()
             val label = binding.labelInput.text.toString()
             val description = binding.descriptionInput.text.toString()
             val amount = binding.amountInput.text.toString().toDoubleOrNull()
+
 
             if (label.isEmpty()) {
                 binding.labelLayout.error = "Please enter a valid label"
@@ -67,7 +66,7 @@ class AddTransactionActivity: AppCompatActivity() {
                 binding.amountLayout.error = "Please enter a valid amount"
             }
             else {
-                val transaction = Transaction(0, label, amount, description)
+                val transaction = Transaction(0, type, label, amount, description)
                 insert(transaction)
             }
         }
@@ -82,6 +81,11 @@ class AddTransactionActivity: AppCompatActivity() {
         val db = Room.databaseBuilder(this,
             AppDatabase::class.java,
             "transactions").build()
+
+//        private fun insert(transaction: Transaction) {
+//            val db = DatabaseBuilder.getInstance(applicationContext)
+//            db.transactionDao().insert(transaction)
+//        }
 
         GlobalScope.launch {
             db.transactionDao().insertAll(transaction)

@@ -22,6 +22,7 @@ class DetailedActivity : AppCompatActivity() {
 
         transaction = intent.getSerializableExtra("transaction") as Transaction
 
+        binding.autoCompleteTxt.setText(transaction.type)
         binding.labelInput.setText(transaction.label)
         binding.amountInput.setText(transaction.amount.toString())
         binding.descriptionInput.setText(transaction.description)
@@ -32,6 +33,10 @@ class DetailedActivity : AppCompatActivity() {
                 imm.hideSoftInputFromWindow(view.windowToken, 0)
                 view.clearFocus()
             }
+        }
+
+        binding.autoCompleteTxt.addTextChangedListener {
+            binding.updateBtn.visibility = View.VISIBLE
         }
 
         binding.labelInput.addTextChangedListener {
@@ -51,16 +56,23 @@ class DetailedActivity : AppCompatActivity() {
         }
 
         binding.updateBtn.setOnClickListener {
+
+            val availableTypes = listOf("Food", "Savings", "Shopping", "Subscriptions", "Transportation", "Utilities")
+
+            val type = binding.autoCompleteTxt.text.toString()
             val label = binding.labelInput.text.toString()
             val description = binding.descriptionInput.text.toString()
             val amount = binding.amountInput.text.toString().toDoubleOrNull()
 
-            if (label.isEmpty())
+            if (!availableTypes.contains(type)) {
+                // Show an error message or handle invalid type
+                binding.autoCompleteTxt.error = "Please select a valid type"
+            } else if (label.isEmpty()) {
                 binding.labelLayout.error = "Please enter a valid label"
-            else if (amount == null)
+            } else if (amount == null) {
                 binding.amountLayout.error = "Please enter a valid amount"
-            else {
-                val updatedTransaction = Transaction(transaction.id, label, amount, description)
+            } else {
+                val updatedTransaction = Transaction(transaction.id, type, label, amount, description)
                 update(updatedTransaction)
             }
         }
