@@ -46,6 +46,7 @@ class FoodFragment : Fragment() {
         db = Room.databaseBuilder(requireContext(), AppDatabase::class.java, "transactions").build()
 
 
+
         // Bind RecyclerView
         binding.foodRecyclerview.apply {
             adapter = foodTransactionAdapter
@@ -54,26 +55,28 @@ class FoodFragment : Fragment() {
         // Fetch food transactions
     }
 
+
     private fun fetchFoodTransactions() {
         GlobalScope.launch {
-            val transactions = db.transactionDao().getAllTypeFood()
+            transactions = db.transactionDao().getAll()
+            val foodTransactions = db.transactionDao().getAllTypeFood()
             requireActivity().runOnUiThread {
-                foodTransactionAdapter.setData(transactions)
+                totalAmountOfTransactions()
+                foodTransactionAdapter.setData(foodTransactions)
             }
         }
     }
 
-
-
-    private fun updateDashboard(){
-
-        
-        val totalAmount = transactions.map { it.amount }.sum()
-        val budgetAmount = transactions.filter { it.amount>0 }.map{it.amount}.sum()
-        val expenseAmount = totalAmount -  budgetAmount
-
+    private fun totalAmountOfTransactions() {
+        val budgetAmount = transactions.filter { it.amount > 0 }.map { it.amount }.sum()
+        val totalFoodAmount = Math.abs(transactions.filter { it.type == "Food" }.map { it.amount }.sum())
+        val foodPercentage = if (budgetAmount != 0.0) {
+            (totalFoodAmount / budgetAmount) * 100
+        } else {
+            0.0
+        }
+        binding.percentageFood.text = "%.2f".format(foodPercentage)
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()
@@ -85,5 +88,3 @@ class FoodFragment : Fragment() {
         fetchFoodTransactions()
     }
 }
-
-

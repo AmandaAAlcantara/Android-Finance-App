@@ -17,43 +17,36 @@ interface TransactionDao {
     //get all Food values from room database
     @Query("SELECT * FROM transactions WHERE type = 'Food'")
     fun getAllTypeFood(): List<Transaction>
-    @Query("SELECT COUNT(*) FROM transactions WHERE type = 'Food'")
-    fun getSumTypeFood(): List<Transaction>
 
 
     //get all Savings values from room database
     @Query("SELECT * FROM transactions WHERE type = 'Savings'")
     fun getAllTypeSavings(): List<Transaction>
-    @Query("SELECT COUNT(*) FROM transactions WHERE type = 'Savings'")
-    fun getSumTypeSavings(): List<Transaction>
+
 
 
     //get all Shopping values from room database
     @Query("SELECT * FROM transactions WHERE type = 'Shopping'")
     fun getAllTypeShopping(): List<Transaction>
-    @Query("SELECT COUNT(*) FROM transactions WHERE type = 'Shopping'")
-    fun getSumTypeShopping(): List<Transaction>
+
 
 
     //get all Subscriptions values from room database
     @Query("SELECT * FROM transactions WHERE type = 'Subscriptions'")
     fun getAllTypeSubscriptions(): List<Transaction>
-    @Query("SELECT COUNT(*) FROM transactions WHERE type = 'Subscriptions'")
-    fun getSumTypeSubscriptions(): List<Transaction>
+
 
 
     //get all Transportation values from room database
     @Query("SELECT * FROM transactions WHERE type = 'Transportation'")
     fun getAllTypeTransportation(): List<Transaction>
-    @Query("SELECT COUNT(*) FROM transactions WHERE type = 'Transportation'")
-    fun getSumTypeTransportation(): List<Transaction>
+
 
 
     //get all Utilities values from room database
     @Query("SELECT * FROM transactions WHERE type = 'Utilities'")
     fun getAllTypeUtilities(): List<Transaction>
-    @Query("SELECT COUNT(*) FROM transactions WHERE type = 'Utilities'")
-    fun getSumTypeUtilities(): List<Transaction>
+
 
 
     //insert transaction
