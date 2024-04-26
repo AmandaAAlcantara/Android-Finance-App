@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.room.Room
+import com.example.mob_dev_portfolio.BuildConfig
 import com.example.mob_dev_portfolio.R
 import com.example.mob_dev_portfolio.databinding.ActivityAddTransactionBinding
 import kotlinx.coroutines.GlobalScope
