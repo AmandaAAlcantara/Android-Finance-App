@@ -70,7 +70,6 @@ class TransactionActivity : AppCompatActivity() {
     private fun fetchAll(){
         GlobalScope.launch {
             transactions = db.transactionDao().getAll()
-
             runOnUiThread{
                 updateDashboard()
                 transactionAdapter.setData(transactions)
@@ -104,6 +103,4 @@ class TransactionActivity : AppCompatActivity() {
         super.onResume()
         fetchAll()
     }
-
-
 }

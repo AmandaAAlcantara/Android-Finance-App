@@ -10,7 +10,6 @@ import com.example.mob_dev_portfolio.R
 
 class UtilitiesFragment : Fragment() {
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -18,5 +17,5 @@ class UtilitiesFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_utilities, container, false)
     }
-
 }
+

@@ -2,5 +2,6 @@
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
     android:color="?rippleColor">
     <item android:drawable="@drawable/close"/>
-
 </ripple>
+
+
