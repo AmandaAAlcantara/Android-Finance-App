@@ -13,7 +13,6 @@ import com.example.mob_dev_portfolio.databinding.ActivityAddTransactionBinding
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
-
 class AddTransactionActivity: AppCompatActivity() {
     private lateinit var binding: ActivityAddTransactionBinding
 
@@ -23,7 +22,7 @@ class AddTransactionActivity: AppCompatActivity() {
         binding = ActivityAddTransactionBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val type = listOf("Food", "Savings", "Shopping", "Subscriptions", "Transportation", "Utilities")
+        val type = listOf("Budget", "Food", "Savings", "Shopping", "Subscriptions", "Transportation", "Utilities")
         val autoComplete: AutoCompleteTextView = findViewById(R.id.auto_complete_txt)
         val adapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, type)
         autoComplete.setAdapter(adapter)
