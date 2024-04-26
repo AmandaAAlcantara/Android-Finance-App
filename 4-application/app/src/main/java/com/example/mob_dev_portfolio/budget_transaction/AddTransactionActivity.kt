@@ -22,7 +22,7 @@ class AddTransactionActivity: AppCompatActivity() {
         binding = ActivityAddTransactionBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val type = listOf("Budget", "Food", "Savings", "Shopping", "Subscriptions", "Transportation", "Utilities")
+        val type = listOf("Income", "Food", "Savings", "Shopping", "Subscriptions", "Transportation", "Utilities")
         val autoComplete: AutoCompleteTextView = findViewById(R.id.auto_complete_txt)
         val adapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, type)
         autoComplete.setAdapter(adapter)
