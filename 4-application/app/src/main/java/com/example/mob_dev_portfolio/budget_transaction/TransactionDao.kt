@@ -41,6 +41,10 @@ interface TransactionDao {
     @Query("SELECT * FROM transactions WHERE type = 'Utilities'")
     fun getAllTypeUtilities(): List<Transaction>
 
+    //get all Income values from room database
+    @Query("SELECT * FROM transactions WHERE type = 'Income'")
+    fun getAllTypeIncome(): List<Transaction>
+
 
 
     //insert transaction

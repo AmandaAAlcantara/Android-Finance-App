@@ -79,11 +79,10 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     kapt 'com.github.bumptech.glide:compiler:4.11.0'
 
-    //Graph Functionality
+    //1st Graph Functionality
     implementation 'com.jjoe64:graphview:4.2.2'
 
     //Confetti
     implementation 'nl.dionsegijn:konfetti:1.2.2'
-
 }
 
