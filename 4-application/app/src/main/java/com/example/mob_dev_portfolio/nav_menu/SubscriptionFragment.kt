@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
 import com.example.mob_dev_portfolio.budget_transaction.AppDatabase
-import com.example.mob_dev_portfolio.budget_transaction.SavingsTransactionAdapter
+import com.example.mob_dev_portfolio.budget_transaction.SubscriptionsTransactionAdapter
 import com.example.mob_dev_portfolio.budget_transaction.Transaction
 import com.example.mob_dev_portfolio.databinding.FragmentSubscriptionBinding
 import kotlinx.coroutines.GlobalScope
@@ -21,7 +21,7 @@ class SubscriptionFragment : Fragment() {
 
     private lateinit var transactions: List<Transaction>
     private lateinit var subscriptionTransactions: List<Transaction>
-    private lateinit var subscriptionTransactionAdapter: SavingsTransactionAdapter
+    private lateinit var subscriptionTransactionAdapter: SubscriptionsTransactionAdapter
     private lateinit var linearLayoutManager: LinearLayoutManager
     private lateinit var db: AppDatabase
 
@@ -38,7 +38,7 @@ class SubscriptionFragment : Fragment() {
 
         // Initialize RecyclerView
         subscriptionTransactions = ArrayList()
-        subscriptionTransactionAdapter = SavingsTransactionAdapter(subscriptionTransactions)
+        subscriptionTransactionAdapter = SubscriptionsTransactionAdapter(subscriptionTransactions)
         linearLayoutManager = LinearLayoutManager(context)
 
         db = Room.databaseBuilder(requireContext(), AppDatabase::class.java, "transactions").build()

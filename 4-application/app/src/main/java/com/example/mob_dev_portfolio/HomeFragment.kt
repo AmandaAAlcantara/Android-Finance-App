@@ -18,18 +18,7 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
-
-        val cardViewNavigateToActivityB = view.findViewById<CardView>(R.id.contributeCard)
-        cardViewNavigateToActivityB.setOnClickListener {
-            navigateToActivityB()
-        }
-
         return view
-    }
-
-    private fun navigateToActivityB() {
-        val intent = Intent(activity, SetGoal::class.java)
-        startActivity(intent)
     }
 }
 

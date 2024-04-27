@@ -11,16 +11,110 @@
     android:orientation="vertical">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
+
+        <Button
+            android:text="SET YOUR SAVING GOAL"
+            android:id="@+id/setGoalBtn"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp">
+        </Button>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/dashboard_goal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="20dp"
+            android:layout_below="@+id/setGoalBtn">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Goal"
+                    android:textSize="16sp"
+                    android:textAllCaps="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"/>
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/savingsGoal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/backround"
+                    android:text="00.00"
+                    android:layout_marginEnd="20dp">
+                </TextView>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/dashboard_achieved"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="20dp"
+            android:layout_below="@+id/dashboard_goal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Achieved"
+                    android:textSize="16sp"
+                    android:textAllCaps="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"/>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/achievedSavings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/backround"
+                    android:text="30.03"
+                    android:layout_marginEnd="20dp">
+                </TextView>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/dashboard_percentage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
-            app:cardCornerRadius="20dp">
+            app:cardCornerRadius="20dp"
+            android:layout_below="@+id/dashboard_achieved">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -63,17 +157,8 @@
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_below="@+id/dashboard_percentage"
-            android:id="@+id/savingsRecyclerview"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp">
-        </androidx.recyclerview.widget.RecyclerView>
 
     </RelativeLayout>
 
 </FrameLayout>
+

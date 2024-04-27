@@ -19,12 +19,6 @@ interface TransactionDao {
     fun getAllTypeFood(): List<Transaction>
 
 
-    //get all Savings values from room database
-    @Query("SELECT * FROM transactions WHERE type = 'Savings'")
-    fun getAllTypeSavings(): List<Transaction>
-
-
-
     //get all Shopping values from room database
     @Query("SELECT * FROM transactions WHERE type = 'Shopping'")
     fun getAllTypeShopping(): List<Transaction>

@@ -12,9 +12,8 @@
         android:theme="@style/Theme.Mobdevportfolio"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".SetGoal"
-            android:exported="false"/>
-
+            android:name=".SetGoalActivity"
+            android:exported="false" />
         <activity
             android:name=".budget_transaction.DetailedActivity"
             android:exported="false" />
