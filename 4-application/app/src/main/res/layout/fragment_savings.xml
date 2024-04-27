@@ -6,15 +6,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".nav_menu.UtilitiesFragment"
-    android:layout_marginTop="65dp"
+    android:layout_marginTop="55dp"
     android:layout_marginBottom="65dp"
     android:orientation="vertical">
+
+    <nl.dionsegijn.konfetti.KonfettiView
+        android:id="@+id/confetti"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </nl.dionsegijn.konfetti.KonfettiView>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/savingsStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal"
+            android:text="Set Saving Goal First"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"></TextView>
 
         <Button
-            android:text="SET YOUR SAVING GOAL"
+            android:layout_below="@id/savingsStatus"
+            android:text="INPUT CURRENT SAVING GOAL"
             android:id="@+id/setGoalBtn"
             android:layout_width="match_parent"
             android:layout_height="65dp"
@@ -156,8 +182,6 @@
 
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
-
-
     </RelativeLayout>
 
 </FrameLayout>

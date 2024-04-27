@@ -13,17 +13,6 @@
         android:layout_height="145dp"
         android:background="@color/backround"/>
 
-    <ImageButton
-        android:id="@+id/closeButton"
-        android:layout_width="34dp"
-        android:layout_height="34dp"
-        android:layout_margin="12dp"
-        android:background="@drawable/close_bg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="50dp"/>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -54,7 +43,7 @@
             android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Get Started!"
+            android:text="Check if you reached your saving goal!"
             android:textSize="16sp"
             android:gravity="center">
         </TextView>
@@ -72,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:layout_marginEnd="12dp"
-                android:hint="Set saving goal"
+                android:hint="Current saving goal"
                 app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText

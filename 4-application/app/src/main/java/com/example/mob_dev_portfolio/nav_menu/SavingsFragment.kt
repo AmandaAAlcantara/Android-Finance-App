@@ -1,7 +1,6 @@
-package com.example.mob_dev_portfolio.nav_menu
-
 import android.app.Activity
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -15,6 +14,8 @@ import com.example.mob_dev_portfolio.budget_transaction.Transaction
 import com.example.mob_dev_portfolio.databinding.FragmentSavingsBinding
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import nl.dionsegijn.konfetti.models.Shape
+import nl.dionsegijn.konfetti.models.Size
 
 class SavingsFragment : Fragment() {
 
@@ -63,6 +64,28 @@ class SavingsFragment : Fragment() {
             // Do something with the savings goal input
             // For example, you can update your UI with the savings goal value
             binding.savingsGoal.text = savingsGoal
+
+            // Check if achieved savings >= savings goal
+            val achievedSavingsString = binding.achievedSavings.text.toString()
+            val achievedSavings = achievedSavingsString.toFloatOrNull()
+            if (achievedSavings != null && savingsGoal != null) {
+                if (achievedSavings >= savingsGoal.toFloat()) {
+                    binding.savingsStatus.text = "You have achieved your savings goal!"
+                    // Trigger confetti animation
+                    binding.confetti.build()
+                        .addColors(Color.MAGENTA, Color.BLUE, Color.CYAN)
+                        .setDirection(0.0, 359.0)
+                        .setSpeed(1f, 5f)
+                        .setFadeOutEnabled(true)
+                        .setTimeToLive(2000L)
+                        .addShapes(Shape.Square, Shape.Circle)
+                        .addSizes(Size(12))
+                        .setPosition(-50f, binding.confetti.width + 50f, -50f, -50f)
+                        .streamFor(300, 3000L)
+                } else {
+                    binding.savingsStatus.text = "You are almost there! Continue saving."
+                }
+            }
         }
     }
 
@@ -99,4 +122,3 @@ class SavingsFragment : Fragment() {
         fetchSavingsTransactions()
     }
 }
-

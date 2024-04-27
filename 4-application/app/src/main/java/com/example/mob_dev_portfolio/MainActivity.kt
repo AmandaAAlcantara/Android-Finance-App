@@ -1,5 +1,7 @@
 package com.example.mob_dev_portfolio
 
+
+import SavingsFragment
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
@@ -13,7 +15,6 @@ import com.example.mob_dev_portfolio.budget_transaction.TransactionActivity
 import com.example.mob_dev_portfolio.databinding.ActivityMainBinding
 import com.example.mob_dev_portfolio.login.UserLoginActivity
 import com.example.mob_dev_portfolio.nav_menu.FoodFragment
-import com.example.mob_dev_portfolio.nav_menu.SavingsFragment
 import com.example.mob_dev_portfolio.nav_menu.ShoppingFragment
 import com.example.mob_dev_portfolio.nav_menu.SubscriptionFragment
 import com.example.mob_dev_portfolio.nav_menu.TransportFragment

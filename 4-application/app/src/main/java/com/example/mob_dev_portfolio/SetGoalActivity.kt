@@ -21,9 +21,10 @@ class SetGoalActivity : AppCompatActivity() {
         addGoalBtn.setOnClickListener {
             val goalAmount = setGoalInput.text.toString()
             val resultIntent = Intent()
-            resultIntent.putExtra("goalAmount", goalAmount)
+            resultIntent.putExtra("savingsGoal", goalAmount)
             setResult(Activity.RESULT_OK, resultIntent)
             finish()
         }
     }
 }
+
