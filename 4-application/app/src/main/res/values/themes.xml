@@ -20,4 +20,25 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
+
+
+    <style name="ScreenBackground"><item name="android:background">@color/white</item></style>
+    <style name="TextColor"><item name="android:textColor">@color/backround</item></style>
+    <style name="Tint"><item name="android:drawableTint">@color/backround</item></style>
+    <style name="Card"><item name="android:backgroundTint">@color/white</item></style>
+    <style name="CardWriting"><item name="android:textColor">@color/dark_grey</item></style>
+
+
+    <style name="LoginImageChange"><item name="android:src">@drawable/signup</item></style>
+    <style name="GoalImageChange"><item name="android:src">@drawable/goal</item></style>
+    <style name="BudgetingImageChange"><item name="android:src">@drawable/budgeting</item></style>
+    <style name="ChartImageChange"><item name="android:src">@drawable/chart</item></style>
+    <style name="SpecificsImageChange"><item name="android:src">@drawable/specifics</item></style>
+    <style name="NewsImageChange"><item name="android:src">@drawable/news</item></style>
+    <style name="OptimizeImageChange"><item name="android:src">@drawable/optimize</item></style>
+
+
+
+
+    
 </resources>

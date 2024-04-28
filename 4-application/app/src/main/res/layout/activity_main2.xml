@@ -144,7 +144,7 @@
             android:layout_height="match_parent"
             android:text="  Swipe right "
             android:drawableLeft="@drawable/delete"
-            android:drawableTint="@color/backround">
+            style="@style/Tint">
 
         </TextView>
         <TextView
@@ -152,7 +152,7 @@
             android:layout_height="match_parent"
             android:text="  Click on transaction"
             android:drawableLeft="@drawable/edit"
-            android:drawableTint="@color/backround">
+            style="@style/Tint">
         </TextView>
     </LinearLayout>
 

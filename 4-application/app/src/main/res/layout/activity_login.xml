@@ -10,11 +10,11 @@
         android:id="@+id/logoImageView"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:src="@drawable/signup"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="50dp"
+        style="@style/LoginImageChange"/>
 
     <TextView
         android:id="@+id/titleLabelTv"

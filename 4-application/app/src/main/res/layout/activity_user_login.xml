@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login.UserLoginActivity">
+    tools:context=".login.UserLoginActivity"
+    style="@style/ScreenBackground">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -63,6 +64,19 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switchMode"
+        android:thumb="@drawable/thumb"
+        app:track="@drawable/track"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="100dp">
+    </androidx.appcompat.widget.SwitchCompat>
+
 
     <!-- Adjusted Button for Logout -->
     <Button

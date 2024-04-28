@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    
+<!--    light theme and dark theme colors -->
     <color name="purple_200">#0cb5ca</color>
     <color name="purple_500">#0cb5ca</color>
     <color name="purple_700">#0cb5ca</color>
@@ -15,6 +17,5 @@
     <color name="red">#E4645B</color>
     <color name="backround">#01012c</color>
     <color name="dark_blue">#01012c</color>
-
-
+    <color name="yellow">#FFDD59</color>
 </resources>

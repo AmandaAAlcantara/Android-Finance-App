@@ -25,7 +25,8 @@
             android:elevation="18dp"
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="8dp">
+            app:cardCornerRadius="8dp"
+            style="@style/Card">
 
             <LinearLayout
                 android:id="@+id/set_goal"
@@ -37,8 +38,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:src="@drawable/goal"
                     android:scaleType="fitCenter"
+                    style="@style/GoalImageChange"
                     />
 
                 <TextView
@@ -47,7 +48,8 @@
                     android:text="Set your goal"
                     android:gravity="center"
                     android:textSize="16sp"
-                    android:padding="8dp"/>
+                    android:padding="8dp"
+                    style="@style/CardWriting"/>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -62,7 +64,8 @@
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
             app:cardCornerRadius="8dp"
-            android:elevation="18dp">
+            android:elevation="18dp"
+            style="@style/Card">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -73,8 +76,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:src="@drawable/budgeting"
                     android:scaleType="fitCenter"
+                    style="@style/BudgetingImageChange"
                     />
 
                 <TextView
@@ -83,7 +86,8 @@
                     android:text="Log your spending"
                     android:gravity="center"
                     android:textSize="16sp"
-                    android:padding="8dp"/>
+                    android:padding="8dp"
+                    style="@style/CardWriting"/>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -105,7 +109,8 @@
             android:elevation="18dp"
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="8dp">
+            app:cardCornerRadius="8dp"
+            style="@style/Card">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -116,8 +121,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:src="@drawable/chart"
                     android:scaleType="fitCenter"
+                    style="@style/ChartImageChange"
                     />
 
                 <TextView
@@ -126,7 +131,8 @@
                     android:text="Visualize spending"
                     android:gravity="center"
                     android:textSize="16sp"
-                    android:padding="8dp"/>
+                    android:padding="8dp"
+                    style="@style/CardWriting"/>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -141,7 +147,8 @@
             android:elevation="18dp"
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="8dp">
+            app:cardCornerRadius="8dp"
+            style="@style/Card">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -152,8 +159,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:src="@drawable/specifics"
                     android:scaleType="fitCenter"
+                    style="@style/SpecificsImageChange"
                     />
 
                 <TextView
@@ -162,7 +169,8 @@
                     android:text="Check specifics"
                     android:gravity="center"
                     android:textSize="16sp"
-                    android:padding="8dp"/>
+                    android:padding="8dp"
+                    style="@style/CardWriting"/>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -184,7 +192,8 @@
             android:elevation="18dp"
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="8dp">
+            app:cardCornerRadius="8dp"
+            style="@style/Card">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -195,8 +204,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:src="@drawable/news"
                     android:scaleType="fitCenter"
+                    style="@style/NewsImageChange"
                     />
 
                 <TextView
@@ -205,7 +214,8 @@
                     android:text="Stay informed"
                     android:gravity="center"
                     android:textSize="16sp"
-                    android:padding="8dp"/>
+                    android:padding="8dp"
+                    style="@style/CardWriting"/>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -220,7 +230,8 @@
             android:elevation="18dp"
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
-            app:cardCornerRadius="8dp">
+            app:cardCornerRadius="8dp"
+            style="@style/Card">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -231,8 +242,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:src="@drawable/optimize"
                     android:scaleType="fitCenter"
+                    style="@style/OptimizeImageChange"
                     />
 
                 <TextView
@@ -241,7 +252,8 @@
                     android:text="Optimize savings"
                     android:gravity="center"
                     android:textSize="16sp"
-                    android:padding="8dp"/>
+                    android:padding="8dp"
+                    style="@style/CardWriting"/>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
