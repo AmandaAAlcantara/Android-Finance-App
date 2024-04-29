@@ -20,7 +20,6 @@
     <string name="title_activity_set_goal">SetGoal</string>
 
 
-
-<!--    dropdown menu-->
+    <!--    dropdown menu-->
     <string name="select">Select Type</string>
 </resources>

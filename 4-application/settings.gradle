@@ -5,6 +5,8 @@ dependencyResolutionManagement {
         mavenCentral()
         jcenter() // Warning: this repository is going to shut down soon
 
+        //for the news API
+        maven { url 'https://www.jitpack.io'}
     }
 }
 rootProject.name = "mob-dev-portfolio"

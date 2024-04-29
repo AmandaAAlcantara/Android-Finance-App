@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".SetGoalActivity">
+    tools:context=".budget_transaction.SetGoalActivity">
 
     <View
         android:id="@+id/View"
@@ -69,7 +69,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:maxLines="1"
-                    android:inputType="text"
+                    android:inputType="numberDecimal|numberSigned"
                     />
             </com.google.android.material.textfield.TextInputLayout>
 

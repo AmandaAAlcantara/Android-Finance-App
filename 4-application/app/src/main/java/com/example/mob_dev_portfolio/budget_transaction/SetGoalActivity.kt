@@ -1,9 +1,10 @@
-package com.example.mob_dev_portfolio
+package com.example.mob_dev_portfolio.budget_transaction
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.app.Activity
 import android.content.Intent
 import android.widget.Button
+import com.example.mob_dev_portfolio.R
 import com.google.android.material.textfield.TextInputEditText
 
 class SetGoalActivity : AppCompatActivity() {

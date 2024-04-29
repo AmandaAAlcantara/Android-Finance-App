@@ -15,10 +15,12 @@ import com.example.mob_dev_portfolio.budget_transaction.TransactionActivity
 import com.example.mob_dev_portfolio.databinding.ActivityMainBinding
 import com.example.mob_dev_portfolio.login.UserLoginActivity
 import com.example.mob_dev_portfolio.nav_menu.FoodFragment
+import com.example.mob_dev_portfolio.nav_menu.HomeFragment
 import com.example.mob_dev_portfolio.nav_menu.ShoppingFragment
 import com.example.mob_dev_portfolio.nav_menu.SubscriptionFragment
 import com.example.mob_dev_portfolio.nav_menu.TransportFragment
 import com.example.mob_dev_portfolio.nav_menu.UtilitiesFragment
+import com.example.mob_dev_portfolio.news.NewsActivity
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -58,6 +60,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 R.id.bottom_profile -> {
                     // Redirect to UserLoginActivity
                     val intent = Intent(this@MainActivity, UserLoginActivity::class.java)
+                    startActivity(intent)
+                }
+
+                R.id.bottom_news -> {
+                    // Redirect to UserLoginActivity
+                    val intent = Intent(this@MainActivity, NewsActivity::class.java)
                     startActivity(intent)
                 }
 

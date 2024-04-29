@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
-import com.example.mob_dev_portfolio.SetGoalActivity
+import com.example.mob_dev_portfolio.budget_transaction.SetGoalActivity
 import com.example.mob_dev_portfolio.budget_transaction.AppDatabase
 import com.example.mob_dev_portfolio.budget_transaction.Transaction
 import com.example.mob_dev_portfolio.databinding.FragmentSavingsBinding
@@ -73,7 +73,7 @@ class SavingsFragment : Fragment() {
                     binding.savingsStatus.text = "You have achieved your savings goal!"
                     // Trigger confetti animation
                     binding.confetti.build()
-                        .addColors(Color.MAGENTA, Color.BLUE, Color.CYAN)
+                        .addColors(Color.BLUE, Color.CYAN)
                         .setDirection(0.0, 359.0)
                         .setSpeed(1f, 5f)
                         .setFadeOutEnabled(true)
