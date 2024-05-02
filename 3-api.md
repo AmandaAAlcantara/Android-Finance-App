@@ -1,7 +1,7 @@
 **Mobile Development 2023/24 Portfolio**
 # API description
 
-Student ID: `c22083120`
+Student ID: `22083120`
 
 Focusing on the transaction functionality of my app, where the user can add income and expenses. I chose to use ConstraintLayout for the activity_add_transaction XMl from the start, as I knew the different input options would grow as I developed this feature, and ensuring the UI would be adaptable was a priority - the new user needs to input information (form format). To expand, ConstraintLayout offers flexible and efficient positioning of UI elements, specifically allowing them to be aligned and distributed relative to each other and the parent. Therefore, making it easier to create the layouts for the different TextInput,  improving the performance and maintainability of the UI for different size phones. Despite the possible use of LinearLayout or RelativeLayout, the ConstraintLayout was the optimal choice considering the 5 elements that need to be positioned, the use was not over-engineered.
 
