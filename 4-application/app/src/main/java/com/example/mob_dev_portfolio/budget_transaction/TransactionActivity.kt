@@ -22,7 +22,7 @@ class TransactionActivity : AppCompatActivity() {
     private lateinit var  db : AppDatabase
 
 
-    // code for budgeting feature inspired by: https://www.youtube.com/watch?v=d87LYtLBSKA
+    // code for budgeting feature was inspired by: https://www.youtube.com/watch?v=d87LYtLBSKA
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMain2Binding.inflate(layoutInflater) // Inflate using data binding
@@ -80,9 +80,9 @@ class TransactionActivity : AppCompatActivity() {
         val totalAmount = transactions.map { it.amount }.sum()
         val budgetAmount = transactions.filter { it.amount>0 }.map{it.amount}.sum()
         val expenseAmount = totalAmount -  budgetAmount
-        binding.balance.text = "$ %.2f".format(totalAmount)
-        binding.budget.text = "$ %.2f".format(budgetAmount)
-        binding.expense.text = "$ %.2f".format(expenseAmount)
+        binding.balance.text = "£ %.2f".format(totalAmount)
+        binding.budget.text = "£ %.2f".format(budgetAmount)
+        binding.expense.text = "£ %.2f".format(expenseAmount)
     }
 
     private fun deleteTransaction(transaction: Transaction){

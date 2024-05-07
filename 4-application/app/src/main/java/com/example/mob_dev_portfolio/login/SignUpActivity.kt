@@ -8,6 +8,7 @@ import android.text.TextUtils
 import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.ActionBar
+import com.example.mob_dev_portfolio.MainActivity
 import com.example.mob_dev_portfolio.databinding.ActivitySignUpBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -84,7 +85,7 @@ class SignUpActivity : AppCompatActivity() {
                 Toast.makeText(this, "Account created with email ${firebaseUser?.email}", Toast.LENGTH_SHORT).show()
 
                 // Navigate to profile activity or main activity after sign up
-                startActivity(Intent(this, UserLoginActivity::class.java))
+                startActivity(Intent(this, MainActivity::class.java))
                 finish()
             }
             .addOnFailureListener { e ->

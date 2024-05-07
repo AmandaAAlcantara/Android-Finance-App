@@ -38,7 +38,7 @@ class GraphView : AppCompatActivity() {
                 // Update UI on the main thread
                 launch(Dispatchers.Main) {
                     val series = LineGraphSeries<DataPoint>(dataPoints)
-                    graph.removeAllSeries() // Clear previous series
+                    graph.removeAllSeries() // Clear previous series so it can be updated
                     graph.addSeries(series)
                 }
 

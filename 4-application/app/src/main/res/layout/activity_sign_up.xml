@@ -7,27 +7,26 @@
     tools:context=".login.SignUpActivity"
     android:orientation="horizontal">
 
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/backround"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
     <TextView
         android:id="@+id/titleLabelTv"
         style="@style/TextAppearance.MaterialComponents.Headline4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Begin you saving journey with us!"
         android:textSize="16sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="64dp" />
-
-    <TextView
-        android:id="@+id/subTitleLabelTv"
-        style="@style/TextAppearance.MaterialComponents.Caption"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/titleLabelTv"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailTil"
@@ -35,10 +34,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        app:layout_constraintTop_toBottomOf="@id/subTitleLabelTv"
+        app:layout_constraintTop_toBottomOf="@id/titleLabelTv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="10dp">
 
         <EditText
             android:id="@+id/emailEt"
@@ -69,7 +68,6 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        tools:ignore="MissingConstraints,UnknownId"
         android:id="@+id/SignUpBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -82,14 +80,13 @@
         android:layout_marginEnd="32dp"/>
 
 
-<!--    <ImageView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_constraintGuide_percent="1.0"-->
-<!--        android:src="@drawable/money"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        android:orientation="horizontal">-->
-<!--    </ImageView>-->
-
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/logout"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/SignUpBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
