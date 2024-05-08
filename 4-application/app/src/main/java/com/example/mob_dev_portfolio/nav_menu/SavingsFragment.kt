@@ -17,6 +17,8 @@ import kotlinx.coroutines.launch
 import nl.dionsegijn.konfetti.models.Shape
 import nl.dionsegijn.konfetti.models.Size
 
+
+//confetti was inspired by https://stackoverflow.com/questions/46016780/positioning-confetti
 class SavingsFragment : Fragment() {
 
     private var _binding: FragmentSavingsBinding? = null

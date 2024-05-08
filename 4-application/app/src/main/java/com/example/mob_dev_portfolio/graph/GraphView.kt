@@ -13,6 +13,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
+//graph was done with the documentation provided by: https://blog.iamtrust.xyz/how-to-create-a-simple-graph-in-android-6c484324a4c1
+
 class GraphView : AppCompatActivity() {
     private lateinit var graph: GraphView
     private lateinit var db: AppDatabase

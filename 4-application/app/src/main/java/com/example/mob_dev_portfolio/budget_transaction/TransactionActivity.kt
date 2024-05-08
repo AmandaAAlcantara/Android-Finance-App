@@ -11,6 +11,7 @@ import com.example.mob_dev_portfolio.databinding.ActivityMain2Binding
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
+// code for budgeting feature was inspired by: https://www.youtube.com/watch?v=d87LYtLBSKA
 class TransactionActivity : AppCompatActivity() {
 
     private lateinit var deletedTransaction: Transaction
@@ -22,7 +23,6 @@ class TransactionActivity : AppCompatActivity() {
     private lateinit var  db : AppDatabase
 
 
-    // code for budgeting feature was inspired by: https://www.youtube.com/watch?v=d87LYtLBSKA
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMain2Binding.inflate(layoutInflater) // Inflate using data binding
