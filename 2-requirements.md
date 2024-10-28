@@ -1,7 +1,6 @@
-**Mobile Development 2023/24 Portfolio**
+
 # Requirements
 
-Student ID: `22083120`
 
 FUNCTIONAL
 1. User Login: Allow users to sign in using the sign-up credentials (email and password) 
