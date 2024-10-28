@@ -1,7 +1,6 @@
-**Mobile Development 2023/24 Portfolio**
+
 # Overview
 
-Student ID: `22083120`
 
 My goal for this application is to develop a practical, functional, and interactive app that tracks, notifies, and detects patterns in spending habits to better manage/improve the ability to save money. The app would have a login and user input for income sources and expenses (transactions). Then, the user will be able to set their saving goal and see a summary of expenses separated by category and percentages.
 
